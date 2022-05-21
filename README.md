@@ -1,4 +1,4 @@
-# java-on-container
+# Java Sprint Boot application on Container
 This repo includes a simple spring boot java application using WebSocket, which is based on a quickstart from spring.io.
 
 Follow along the steps to build, package and run the Java application on a container.
