@@ -4,9 +4,11 @@ This repo includes a simple spring boot java application using WebSocket, which 
 Follow along the steps to build, package and run the Java application on a container.
 
 1. Build and Package the Java application
+
 This simple Java application is an interactive web application using WebSocket (thin & lightweight layer above TCP), which enables a bi-directional communication between a client and a server, and based on traditional client-server model. The spring boot application project can be bootstrapped with Spring Initializr (https://start.spring.io/), with the required dependency of WebSocket libraries. Please continue with the next steps from reference link below [1].  
 
 2. Create Dockerfile
+
 This implementation uses a multi-stage build with Docker, in which the first stage is used to build and package the application code (.jar) and second state will only include the previously built application code (.jar) and a JRE to run it. This approach helps in keeping the final image size relatively smaller and only include the required runtime artefact.
 
 The base images used with multi-stage builds are **maven:3.8-openjdk-11-slim** (includes maven:3.8 + openjdk11) and **openjdk:11-jre-slim** (includes JRE runtime), both are lightweight images from Dockerhub container registry
